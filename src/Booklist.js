@@ -7,8 +7,14 @@ class Booklist extends Component {
     books: bookData
   };
 
-  handleClick = () => {
-    console.log("information of parent");
+  // delete book list
+  filterData = (id) => {
+    const sortBooks = this.state.books.filter(book => {
+      return book.id !== id;
+    })
+    this.setState({
+      books: sortBooks
+    })
   };
 
   render() {
@@ -16,7 +22,7 @@ class Booklist extends Component {
       return <Book 
           info={book} 
           key={book.id} 
-          handleClick={this.handleClick} 
+          deleteItem={this.filterData}
         />;
     });
     console.log(books);

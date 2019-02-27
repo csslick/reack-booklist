@@ -6,7 +6,8 @@ class Book extends Component {
   };
 
   render() {
-    const { img, title, author } = this.props.info;
+    const { id, img, title, author } = this.props.info;
+    const { deleteItem } = this.props;
     // const { handleClick } = this.props;
     // console.log(handleClick);
 
@@ -16,6 +17,10 @@ class Book extends Component {
         <div>
           <h4>Title: {title}</h4>
           <p>By: {author}</p>
+          <button 
+            onClick={() => deleteItem(id)}>
+            Delete
+          </button>
           {/* <button
             onClick={() => {
               this.setState({ count: this.state.count + 1 });
