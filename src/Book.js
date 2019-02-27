@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import Button from "./Button";
 class Book extends Component {
   state = {
-    count: 0
+    count: 0,
+    showInfo: true
   };
+
+  handleInfo = () => {
+    this.setState({
+      showInfo: !this.state.showInfo
+    })
+  }
 
   render() {
     const { id, img, title, author } = this.props.info;
@@ -21,6 +27,14 @@ class Book extends Component {
             onClick={() => deleteItem(id)}>
             Delete
           </button>
+          <button onClick={this.handleInfo}>show info</button>
+          {console.log(this.state.showInfo)}
+          {
+            this.state.showInfo ? 
+              <p>book information here...</p> 
+              : null
+          }
+
           {/* <button
             onClick={() => {
               this.setState({ count: this.state.count + 1 });

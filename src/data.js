@@ -16,6 +16,12 @@ const bookData = [
     img: "https://m.media-amazon.com/images/I/91lxhcUM91L._SX140_.jpg",
     title: "The Beantown Girlse",
     author: "JANE HEALEY"
+  },
+  {
+    id: 3,
+    img: "https://m.media-amazon.com/images/I/81wRnKbEwlL._SX140_.jpg",
+    title: "Beneath a Scarlet Sky",
+    author: "MARK SULLIVAN"
   }
 ];
 

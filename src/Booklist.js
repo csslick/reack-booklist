@@ -9,6 +9,7 @@ class Booklist extends Component {
 
   // delete book list
   filterData = (id) => {
+    console.log(id)
     const sortBooks = this.state.books.filter(book => {
       return book.id !== id;
     })
